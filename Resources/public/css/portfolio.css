@@ -1,0 +1,59 @@
+/* Katia Moreira - Portfolio */
+
+/* -- HEADER -- */
+header {
+	background-color: #2688c5;
+	height: 70px;
+}
+#header {
+	margin-right: auto;
+	margin-left: auto;
+	width: 70%;
+}
+#header #menu {
+	font-family: 'Oswald' Arial sans-serif;
+	padding-top: 25px;
+}
+#header #menu li {
+	font-family: 'Oswald' Arial sans-serif;
+	text-transform: uppercase;
+	float: left;
+	margin-right: 40px;
+}
+#header #menu li a {
+	font-family: 'Oswald' Arial sans-serif;
+	color: #FFF;
+}
+#header #menu li a:hover {
+	color: #393939;
+}
+#header #social {
+	position: absolute;
+	left: 80%;
+	top: 20px;
+}
+#header #social a {
+	width: 32px;
+	height: 32px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+#header #social .twitter {
+	background: url("/bundles/kaymoreyportfolio/images/social/twitter02_dark.png");
+}
+#header #social .linkedin {
+	background: url("/bundles/kaymoreyportfolio/images/social/in_dark.png");
+}
+#header #social .blog {
+	background: url("/bundles/kaymoreyportfolio/images/social/blog_dark.png");
+}
+#header #social .twitter:hover {
+	background: url("/bundles/kaymoreyportfolio/images/social/twitter02_active.png");
+}
+#header #social .linkedin:hover {
+	background: url("/bundles/kaymoreyportfolio/images/social/in_active.png");
+}
+#header #social .blog:hover {
+	background: url("/bundles/kaymoreyportfolio/images/social/blog_active.png");
+}
