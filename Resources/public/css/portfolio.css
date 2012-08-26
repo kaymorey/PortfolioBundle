@@ -1,6 +1,6 @@
 /* Katia Moreira - Portfolio */
 
-/* -- HEADER -- */
+/* ---- HEADER ---- */
 header {
 	background-color: #2688c5;
 	height: 70px;
@@ -56,4 +56,38 @@ header {
 }
 #header #social .blog:hover {
 	background: url("/bundles/kaymoreyportfolio/images/social/blog_active.png");
+}
+
+/* ---- CONTENT ---- */
+#content {
+	width: 1000px;
+	margin: auto;
+	position: relative;
+}
+
+/* ---- INDEX ---- */
+#content #home #logo {
+	width: 315px;
+	margin-top: 10px;
+	float: left; 
+}
+#content #home h1 {
+	color: #2688C5;
+	font-family: 'Oswald' Arial sans-serif;
+	font-size: 65px;
+	line-height: 64px;
+}
+#content #home h2 {
+	color: #2688C5;
+	font-family: 'Oswald' Arial sans-serif;
+	font-size: 35px;
+}
+#content #home #text {
+	position: relative;
+	top: 100px;
+	left: 45px;
+}
+#content #home .fb-like {
+	margin-top: 3px;
+	margin-bottom: 8px;
 }
