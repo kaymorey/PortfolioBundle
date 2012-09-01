@@ -91,3 +91,25 @@ header {
 	margin-top: 3px;
 	margin-bottom: 8px;
 }
+
+/* ---- FOOTER ---- */
+footer {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 230px;
+	background-color: #e4e3e3;
+}
+footer #profile {
+	float: left;
+}
+footer #profile-text {
+	width: 295px;
+	font-family: Georgia, Arial, sans-serif;
+	color: #393939;
+	font-size: 12px;
+}
+footer #profile-text .blue {
+	color: #2688C5; 
+}
