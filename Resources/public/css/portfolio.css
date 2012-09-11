@@ -3,7 +3,7 @@
 /* ---- HEADER ---- */
 header {
 	background-color: #2688c5;
-	height: 70px;
+	height: 52px;
 }
 #header {
 	margin-right: auto;
@@ -11,17 +11,17 @@ header {
 	width: 70%;
 }
 #header #menu {
-	font-family: 'Oswald' Arial sans-serif;
-	padding-top: 25px;
+	font-family: 'Oswald', Arial, sans-serif;
+	padding-top: 15px;
 }
 #header #menu li {
-	font-family: 'Oswald' Arial sans-serif;
+	font-family: 'Oswald', Arial, sans-serif;
 	text-transform: uppercase;
 	float: left;
 	margin-right: 40px;
 }
 #header #menu li a {
-	font-family: 'Oswald' Arial sans-serif;
+	font-family: 'Oswald', Arial, sans-serif;
 	color: #FFF;
 }
 #header #menu li a:hover {
@@ -30,7 +30,7 @@ header {
 #header #social {
 	position: absolute;
 	left: 80%;
-	top: 20px;
+	top: 10px;
 }
 #header #social a {
 	width: 32px;
@@ -61,6 +61,7 @@ header {
 /* ---- CONTENT ---- */
 #content {
 	width: 1000px;
+	height: 450px;
 	margin: auto;
 	position: relative;
 }
@@ -68,48 +69,84 @@ header {
 /* ---- INDEX ---- */
 #content #home #logo {
 	width: 315px;
-	margin-top: 10px;
+	margin-top: 25px;
 	float: left; 
+}
+#content #home #text {
+	position: relative;
+	top: 115px;
+	left: 45px;
 }
 #content #home h1 {
 	color: #2688C5;
-	font-family: 'Oswald' Arial sans-serif;
-	font-size: 65px;
+	font-family: 'Oswald', Arial, sans-serif;
+	font-size: 4em;
 	line-height: 64px;
 }
 #content #home h2 {
 	color: #2688C5;
-	font-family: 'Oswald' Arial sans-serif;
-	font-size: 35px;
-}
-#content #home #text {
-	position: relative;
-	top: 100px;
-	left: 45px;
+	font-family: 'Oswald', Arial, sans-serif;
+	font-size: 2.1em;
 }
 #content #home .fb-like {
 	margin-top: 3px;
 	margin-bottom: 8px;
 }
+#content #home #paginator {
+	position: relative;
+	left: 46px;
+	top: 127px;
+}
+#content #home #paginator .page {
+	width: 10px;
+	height: 10px;
+	margin-right: 3px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+#content #home #paginator .page img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#content #home #paginator .page img.active {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+}
 
 /* ---- FOOTER ---- */
 footer {
-	position: absolute;
+	/*position: absolute;
 	bottom: 0px;
-	left: 0px;
+	left: 0px;*/
 	width: 100%;
-	height: 230px;
+	height: 192px;
 	background-color: #e4e3e3;
+}
+footer #footer {
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 15px;
+	position: relative;
 }
 footer #profile {
 	float: left;
 }
 footer #profile-text {
-	width: 295px;
+	width: 300px;
 	font-family: Georgia, Arial, sans-serif;
 	color: #393939;
-	font-size: 12px;
+	font-size: 0.8em;
+	padding-left: 95px;
 }
 footer #profile-text .blue {
 	color: #2688C5; 
+}
+footer .twtr-widget-profile {
+	position: absolute;
+	top: 0;
+	right: 10px;
 }

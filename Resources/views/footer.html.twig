@@ -1,6 +1,33 @@
-<div>
-		<img src="http://fakeimg.pl/81x84/" id="profile" alt="" />
-		<p id="profile-text">
-			Je m’appelle <span class="blue">Katia Moreira</span>. Je suis étudiante en 1ère année à l‘école d’ingénieur <span class="blue">IMAC</span> (Image, Multimedia, Audiovisuel, Communication) et je tends à devenir <span class="blue">développeuse web</span>. Je vous invite à découvrir mes travaux sur ce site.
-		</p>
+<div id="footer">
+	<img src="http://fakeimg.pl/81x84/" id="profile" alt="" />
+	<p id="profile-text">
+		Je m’appelle <span class="blue">Katia Moreira</span>. Je suis étudiante en 1ère année à l‘école d’ingénieur <span class="blue">IMAC</span> (Image, Multimedia, Audiovisuel, Communication) et je tends à devenir <span class="blue">développeuse web</span>. Je vous invite à découvrir mes travaux sur ce site.
+	</p>
+	<script>
+        new TWTR.Widget({
+            version: 2,
+            type: 'profile',
+            rpp: 2,
+            interval: 30000,
+            width: 400,
+            height: 180,
+            theme: {
+                shell: {
+                  background: '#e4e3e3',
+                  color: '#2588c2'
+                },
+                tweets: {
+                    background: '#e4e3e3',
+                    color: '#393939',
+                    links: '#2586c2'
+                }
+            },
+            features: {
+                scrollbar: false,
+                loop: false,
+                live: false,
+             behavior: 'all'
+            }
+        }).render().setUser('kaymorey').start();
+    </script>
 </div>
