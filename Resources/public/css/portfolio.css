@@ -102,18 +102,13 @@ header {
 	height: 10px;
 	margin-right: 3px;
 	overflow: hidden;
-	position: relative;
 	float: left;
+	background-image: url('../images/paginator.png');
+	background-position: top left;
+	cursor: pointer;
 }
-#content #home #paginator .page img {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-#content #home #paginator .page img.active {
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
+#content #home #paginator .page.active {
+	background-position: bottom left;
 }
 
 /* ---- FOOTER ---- */
