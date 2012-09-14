@@ -1,0 +1,161 @@
+/* Katia Moreira - Portfolio - created with LESS - LESS is MORE */
+
+@blue: #2688c5;
+@grey: #393939;
+.oswald () {
+  font-family: 'Oswald', Arial, sans-serif;
+}
+.background-img (@url) {
+	background: url("/bundles/kaymoreyportfolio/images/@{url}");
+}
+
+/* ---- HEADER ---- */
+header {
+	background-color: @blue;
+	height: 52px;
+}
+#header {
+	margin-right: auto;
+	margin-left: auto;
+	width: 70%;
+	#menu {
+		.oswald;
+		padding-top: 15px;
+		li {
+			.oswald;
+			text-transform: uppercase;
+			float: left;
+			margin-right: 40px;
+			a {
+				.oswald;
+				color: #FFF;
+				&:hover {
+					color: @grey;
+				}
+			}
+		}
+	}
+	#social {
+		position: absolute;
+		left: 80%;
+		top: 10px;
+		a {
+			width: 32px;
+			height: 32px;
+			display: block;
+			float: left;
+			margin-right: 10px;
+		}
+		.twitter {
+			.background-img("social/twitter02_dark.png");
+			&:hover {
+				.background-img("social/twitter02_active.png");
+			}
+		}
+		.linkedin {
+			.background-img("social/in_dark.png");	
+			&:hover {
+				.background-img("social/in_active.png");
+			}
+		}
+		.blog {
+			.background-img("social/blog_dark.png");
+			&:hover {
+				.background-img("social/blog_active.png");
+			}	
+		}
+	}
+}
+
+/* ---- CONTENT ---- */
+#content {
+	width: 100%;
+	height: auto;
+	margin: auto;
+	position: relative;
+}
+
+/* ---- INDEX ---- */
+#home {
+	width: 70%;
+	margin: auto;
+	#logo {
+		width: 315px;
+		margin-top: 25px;
+		float: left; 
+	}
+	#text {
+		margin-top: 75px;
+		/*position: relative;
+		top: 115px;
+		left: 45px;*/
+	}
+	h1 {
+		color: @blue;
+		.oswald;
+		font-size: 4.0625em; /* 65px / 16px */
+		line-height: 64px;
+	}
+	h2 {
+		color: @blue;
+		.oswald;
+		font-size: 2.1875em; /* 35px / 16px */
+	}
+	.fb-like {
+		margin-top: 3px;
+		margin-bottom: 8px;
+	}
+	#paginator {
+		position: relative;
+		left: 46px;
+		top: 127px;
+		.page {
+			width: 10px;
+			height: 10px;
+			margin-right: 3px;
+			overflow: hidden;
+			float: left;
+			.background-img("paginator.png");
+			background-position: top left;
+			cursor: pointer;
+		}
+		&.active {
+			background-position: bottom left;
+		}
+	}
+}
+
+/* ---- FOOTER ---- */
+footer {
+	/*position: absolute;
+	bottom: 0px;
+	left: 0px;*/
+	width: 100%;
+	height: 192px;
+	background-color: #e4e3e3;
+	#footer {
+		width: 1000px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-top: 15px;
+		position: relative;
+	}
+	#profile {
+		float: left;
+	}
+	#profile-text {
+		width: 300px;
+		font-family: Georgia, Arial, sans-serif;
+		color: #393939;
+		font-size: 0.8125em; /* 13px / 16px */
+		padding-left: 95px;
+		.blue {
+			color: @blue;
+		}
+	}
+	.twtr-widget-profile {
+		position: absolute;
+		top: 0;
+		right: 10px;	
+	}
+}
