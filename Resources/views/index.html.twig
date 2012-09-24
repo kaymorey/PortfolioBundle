@@ -17,18 +17,20 @@
 </script>
 
 <section id="home">
-	<img src="{{ asset('bundles/kaymoreyportfolio/images/logo.png') }}" alt="" id="logo" />
 	<div id="text">
 		<h1>Katia Moreira</h1>
 		<h2>Etudiante ingénieur IMAC</h2>
 		<div class="fb-like" data-href="http://katia-moreira.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div><br />
 		<a href="https://twitter.com/share" class="twitter-share-button" data-via="kaymorey" data-lang="fr"></a>
+		<div id="paginator">
+			<a class="page"></a>
+			<a class="page"></a>
+			<a class="page"></a>
+			<a class="page"></a>
+		</div>
 	</div>
-	<div id="paginator">
-		<a class="page"></a>
-		<a class="page"></a>
-		<a class="page"></a>
-		<a class="page"></a>
+	<div id="logo">
+		<img src="{{ asset('bundles/kaymoreyportfolio/images/logo.png') }}" alt="" />
 	</div>
 </section>
 {% endblock %}

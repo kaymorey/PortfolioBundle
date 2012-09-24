@@ -69,12 +69,19 @@ header {
   margin: auto;
 }
 #home #logo {
-  width: 315px;
-  margin-top: 25px;
-  float: left;
+  width: 330px;
+  margin-top: 1.8%;
+  margin-bottom: 1.8%;
+}
+#home #logo img {
+  max-width: 100%;
 }
 #home #text {
-  margin-top: 75px;
+  margin-top: 10.333333333333333%;
+  float: right;
+  margin-right: 24.111111111%;
+  /* 217px / 900px  */
+
   /*position: relative;
 		top: 115px;
 		left: 45px;*/
@@ -100,9 +107,7 @@ header {
   margin-bottom: 8px;
 }
 #home #paginator {
-  position: relative;
-  left: 46px;
-  top: 127px;
+  margin-top: 5px;
 }
 #home #paginator .page {
   width: 10px;
@@ -114,31 +119,33 @@ header {
   background-position: top left;
   cursor: pointer;
 }
-#home #paginator.active {
+#home #paginator .page.active {
   background-position: bottom left;
 }
 /* ---- FOOTER ---- */
 footer {
-  /*position: absolute;
-	bottom: 0px;
-	left: 0px;*/
-
+  bottom: 0px;
+  left: 0px;
+  clear: both;
   width: 100%;
-  height: 192px;
   background-color: #e4e3e3;
 }
 footer #footer {
-  width: 1000px;
+  width: 70%;
   margin-right: auto;
   margin-left: auto;
   padding-top: 15px;
   position: relative;
 }
-footer #profile {
+footer #footer #left {
+  display: inline-block;
+  vertical-align: top;
+  width: 42%;
+}
+footer #footer #profile {
   float: left;
 }
-footer #profile-text {
-  width: 300px;
+footer #footer #profile-text {
   font-family: Georgia, Arial, sans-serif;
   color: #393939;
   font-size: 0.8125em;
@@ -146,11 +153,79 @@ footer #profile-text {
 
   padding-left: 95px;
 }
-footer #profile-text .blue {
+footer #footer #profile-text .blue {
   color: #2688c5;
 }
-footer .twtr-widget-profile {
-  position: absolute;
-  top: 0;
-  right: 10px;
+footer #footer #twitter_update_list {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 17%;
+  font-family: Georgia, Arial, sans-serif;
+  color: #393939;
+  font-size: 0.8125em;
+  /* 13px / 16px */
+}
+footer #footer #twitter_update_list #head {
+  margin-bottom: 12px;
+}
+footer #footer #twitter_update_list #head img {
+  float: left;
+  vertical-align: middle;
+}
+footer #footer #twitter_update_list #head .twitter-follow-button {
+  margin-top: 8px;
+  margin-left: 8px;
+}
+footer #footer #twitter_update_list #head a {
+  margin-left: 8px;
+  font-size: 1.230769230769231em;
+  /* 16px / 13px */
+
+  color: #2688c5;
+}
+footer #footer #twitter_update_list p {
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+footer #footer #twitter_update_list p.first {
+  border-bottom: dotted #2688c5 1px;
+}
+footer #footer #twitter_update_list p a {
+  font-size: 1em;
+  /* 13px / 13px */
+
+  color: #2688c5;
+}
+/* --- TEST LOGO HOVER ---- */
+#breakApartRounded {
+  background-image: url('/bundles/kaymoreyportfolio/images/circle.png') /*, 
+		url('/bundles/kaymoreyportfolio/images/circle.png'), 
+		url('/bundles/kaymoreyportfolio/images/circle.png'), 
+		url('/bundles/kaymoreyportfolio/images/circle.png')*/;
+  background-repeat: no-repeat;
+  background-position: -50px -50px;
+  /*right down*/
+
+  /*Transition*/
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#breakApartRounded:hover {
+  background-position: -200px -200px;
+}
+.circle {
+  height: 200px;
+  width: 200px;
+  background-color: #eee;
+  margin: 0 50px 50px 0;
+  /*Make it a circle*/
+
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
 }

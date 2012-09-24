@@ -12,10 +12,10 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
 	/**
-     * @Route("/{name}", name="portfolio_accueil", defaults={"name"=null})
+     * @Route("/", name="portfolio_accueil")
      */
-    public function indexAction($name)
+    public function indexAction()
     {
-        return $this->render('KaymoreyPortfolioBundle::index.html.twig', array('name' => $name));
+        return $this->render('KaymoreyPortfolioBundle::index.html.twig');
     }
 }
