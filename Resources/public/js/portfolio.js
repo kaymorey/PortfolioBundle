@@ -1,9 +1,24 @@
 $(document).ready(function() {
 	$("#content #home #paginator .page").click(function() {
-		console.log("ok");
 		$("#content #home #paginator .page").removeClass("active");
 		$(this).addClass("active");
 	});
+
+	$(".slider img").hide();
+	$(".slider img:first").show();
+
+	if($(".slider").length > 0)
+	{
+		 $(".slider").circleCSS3Slider({
+			auto: true,
+			animationSpeed : 1000, 
+			animationInterval : 6000,
+			sliderClass : ".slider", 
+			sliderElementClass : "img",
+			paginatorElement : "#paginator",
+			animationElement : "#breakApartRounded"
+		});
+	}
 
 	// Twitter - get last tweets
 	

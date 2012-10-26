@@ -17,7 +17,7 @@ header {
 #header {
 	margin-right: auto;
 	margin-left: auto;
-	width: 70%;
+	width: 67%;
 	#menu {
 		.oswald;
 		padding-top: 15px;
@@ -25,7 +25,7 @@ header {
 			.oswald;
 			text-transform: uppercase;
 			float: left;
-			margin-right: 40px;
+			margin-right: 7%;
 			a {
 				.oswald;
 				color: #FFF;
@@ -79,51 +79,82 @@ header {
 #home {
 	width: 70%;
 	margin: auto;
+	position: relative;
+	.static {
+		display: block;
+	}
+	.slider {
+		display: none;
+	}
 	#logo {
-		width: 330px;
+		width: 35%;
 		margin-top: 1.8%;
 		margin-bottom: 1.8%;
 		//margin-top: 25px;
 		img {
 			max-width: 100%;
 		}
+		#breakApartRounded {
+			position: absolute;
+			top: 0;
+			background-image: url('/bundles/kaymoreyportfolio/images/slider/circle.png'), 
+				url('/bundles/kaymoreyportfolio/images/slider/circle.png'), 
+				url('/bundles/kaymoreyportfolio/images/slider/circle.png'), 
+				url('/bundles/kaymoreyportfolio/images/slider/circle.png');
+			background-repeat: no-repeat;
+		 
+			/*Transition*/
+			-webkit-transition: all 1s ease;
+			-moz-transition: all 1s ease;
+			-o-transition: all 1s ease;
+			-ms-transition: all 1s ease;
+			transition: all 1s ease; 
+		}
+		.circle {
+			height: 330px; 
+			width: 330px;
+			background: transparent;
+			margin: 0 50px 50px 0;
+		 
+			/*Make it a circle*/
+			-webkit-border-radius: 165px;
+			-moz-border-radius: 165px;
+			border-radius: 165px;
+		}
 	}
 	#text {
-		margin-top: 10.333333333333333%;
-		float: right;
-		margin-right: 24.111111111%; /* 217px / 900px  */
-		/*position: relative;
-		top: 115px;
-		left: 45px;*/
-	}
-	h1 {
-		color: @blue;
-		.oswald;
-		font-size: 4.0625em; /* 65px / 16px */
-		line-height: 64px;
-	}
-	h2 {
-		color: @blue;
-		.oswald;
-		font-size: 2.1875em; /* 35px / 16px */
-	}
-	.fb-like {
-		margin-top: 3px;
-		margin-bottom: 8px;
-	}
-	#paginator {
-		margin-top: 5px;
-		.page {
-			width: 10px;
-			height: 10px;
-			margin-right: 3px;
-			overflow: hidden;
-			float: left;
-			.background-img("paginator.png");
-			background-position: top left;
-			cursor: pointer;
-			&.active {
-				background-position: bottom left;
+		position: absolute;
+		top: 90px;
+		left: 370px;
+		h1 {
+			color: @blue;
+			.oswald;
+			font-size: 3.3125em; /* 53px / 16px */
+			line-height: 64px;
+		}
+		h2 {
+			color: @blue;
+			.oswald;
+			font-size: 1.75em; /* 28px / 16px */
+		}
+		.fb-like {
+			margin-top: 3px;
+			margin-bottom: 8px;
+		}
+		#paginator {
+			margin-top: 5px;
+			.page {
+				width: 10px;
+				height: 10px;
+				margin-right: 3px;
+				overflow: hidden;
+				float: left;
+				.background-img("slider/paginator.png");
+				background-position: top left;
+				cursor: pointer;
+				&.active {
+					background-position: bottom left;
+				}
 			}
 		}
 	}
@@ -131,9 +162,6 @@ header {
 
 /* ---- FOOTER ---- */
 footer {
-	//position: absolute;
-	bottom: 0px;
-	left: 0px;
 	clear: both;
 	width: 100%;
 	background-color: #e4e3e3;
@@ -142,6 +170,7 @@ footer {
 		margin-right: auto;
 		margin-left: auto;
 		padding-top: 15px;
+		padding-bottom: 5px;
 		position: relative;
 		#left {
 			display: inline-block;
@@ -161,10 +190,10 @@ footer {
 			}
 		}
 		#twitter_update_list {
-			width: 35%;
+			width: 39%;
 			display: inline-block;
 			vertical-align: top;
-			margin-left: 17%;
+			margin-left: 15%;
 			font-family: Georgia, Arial, sans-serif;
 			color: @grey;
 			font-size: 0.8125em; /* 13px / 16px */			
@@ -198,34 +227,35 @@ footer {
 		}
 	}
 }
-/* --- TEST LOGO HOVER ---- */
-#breakApartRounded {
-	background-image: url('/bundles/kaymoreyportfolio/images/circle.png')/*, 
-		url('/bundles/kaymoreyportfolio/images/circle.png'), 
-		url('/bundles/kaymoreyportfolio/images/circle.png'), 
-		url('/bundles/kaymoreyportfolio/images/circle.png')*/;
-	background-repeat: no-repeat;
-	background-position: -50px -50px; /*right down*/
- 
-	/*Transition*/
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	transition: all 1s ease;
- 
+@media screen and (min-height: 610px) {
+	footer {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+	}
 }
- 
-#breakApartRounded:hover {
-	background-position: -200px -200px;	
+@media screen and (min-width: 1100px) {
+	#home {
+		#text {
+			h1 {
+				font-size: 4.0625em; /* 65px / 16px */
+			}
+			h2 {
+				font-size: 2.1875em; /* 35px / 16px */
+			}
+		}
+	}
 }
-.circle {
-	height: 200px; width: 200px;
-	background-color: #eee;
-	margin: 0 50px 50px 0;
- 
-	/*Make it a circle*/
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-	border-radius: 100px;
+@media screen and (min-width: 900px) {
+	#home {
+		.slider {
+			display: block;
+		}
+		.static {
+			display: none;
+		}
+		#logo {
+			width: 330px;
+		}
+	}
 }
