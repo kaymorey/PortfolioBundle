@@ -66,8 +66,9 @@ header {
 #home {
   width: 70%;
   position: absolute;
-  top: 13%;
+  top: 13.5%;
   left: 15%;
+  overflow: hidden;
 }
 #home .static {
   display: block;
@@ -77,6 +78,8 @@ header {
 }
 #home #logo {
   width: 35%;
+  float: left;
+  padding-right: 25px;
 }
 #home #logo img {
   max-width: 100%;
@@ -106,9 +109,7 @@ header {
   border-radius: 165px;
 }
 #home #text {
-  position: absolute;
-  top: 90px;
-  left: 370px;
+  padding-top: 10%;
 }
 #home #text h1 {
   color: #2688c5;
