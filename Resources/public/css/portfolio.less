@@ -16,7 +16,7 @@ header {
 #header {
 	margin-right: auto;
 	margin-left: auto;
-	width: 67%;
+	width: 77%;
 	#menu {
 		.oswald;
 		padding-top: 15px;
@@ -75,7 +75,7 @@ header {
 
 /* ---- INDEX ---- */
 #home {
-	width: 70%;
+	width: 80%;
 	position: absolute;
 	top: 13.5%;
 	left: 15%;
@@ -88,8 +88,6 @@ header {
 	}
 	#logo {
 		width: 35%;
-		float : left;
-		padding-right: 25px;
 		img {
 			max-width: 100%;
 		}
@@ -165,7 +163,7 @@ footer {
 	line-height: 185px;
 	background-color: #e4e3e3;
 	#footer {
-		width: 70%;
+		width: 80%;
 		margin-right: auto;
 		margin-left: auto;
 		position: relative;
@@ -245,8 +243,12 @@ footer {
 		}
 	}
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 915px) {
+	#header {
+		width: 67%;
+	}
 	#home {
+		width: 70%;
 		.slider {
 			display: block;
 		}
@@ -254,7 +256,12 @@ footer {
 			display: none;
 		}
 		#logo {
+			float : left;
+			padding-right: 25px;
 			width: 330px;
 		}
+	}
+	#footer {
+		width: 70%;
 	}
 }
