@@ -72,14 +72,14 @@ header {
 	width: 100%;
 	height: auto;
 	margin: auto;
-	position: relative;
 }
 
 /* ---- INDEX ---- */
 #home {
 	width: 70%;
-	margin: auto;
-	position: relative;
+	position: absolute;
+	top: 13%;
+	left: 15%;
 	.static {
 		display: block;
 	}
@@ -88,9 +88,6 @@ header {
 	}
 	#logo {
 		width: 35%;
-		margin-top: 1.8%;
-		margin-bottom: 1.8%;
-		//margin-top: 25px;
 		img {
 			max-width: 100%;
 		}
@@ -164,17 +161,18 @@ header {
 footer {
 	clear: both;
 	width: 100%;
+	height: 185px;
+	line-height: 185px;
 	background-color: #e4e3e3;
 	#footer {
 		width: 70%;
 		margin-right: auto;
 		margin-left: auto;
-		padding-top: 15px;
-		padding-bottom: 5px;
 		position: relative;
 		#left {
 			display: inline-block;
-			vertical-align: top;
+			vertical-align: middle;
+			line-height:1.2;
 			width: 42%;
 		}
 		#profile {
@@ -190,9 +188,10 @@ footer {
 			}
 		}
 		#twitter_update_list {
-			width: 39%;
+			width: 40%;
 			display: inline-block;
-			vertical-align: top;
+			vertical-align: middle;
+			line-height:1.2;
 			margin-left: 15%;
 			font-family: Georgia, Arial, sans-serif;
 			color: @grey;

@@ -10,7 +10,7 @@ jQuery.fn.extend({
 				sliderClass : ".slider",
 				sliderElementClass : "img",
 				paginatorElement : ".paginator",
-				animationElement: ".circle",
+				animationElement: ".circle"
 		}, options);
 		var currentIndex = 0;
 		var slider = $(settings.sliderClass);
