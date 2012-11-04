@@ -7,7 +7,7 @@ header {
 #header {
   margin-right: auto;
   margin-left: auto;
-  width: 77%;
+  width: 87%;
 }
 #header #menu {
   font-family: 'Oswald', Arial, sans-serif;
@@ -64,20 +64,12 @@ header {
 }
 /* ---- INDEX ---- */
 #home {
-  width: 80%;
-  position: absolute;
-  top: 13.5%;
-  left: 15%;
+  width: 90%;
+  margin: auto;
   overflow: hidden;
 }
-#home .static {
-  display: block;
-}
-#home .slider {
-  display: none;
-}
 #home #logo {
-  width: 35%;
+  width: 330px;
 }
 #home #logo img {
   max-width: 100%;
@@ -153,7 +145,7 @@ footer {
   background-color: #e4e3e3;
 }
 footer #footer {
-  width: 80%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
   position: relative;
@@ -221,6 +213,11 @@ footer #footer #twitter_update_list p a {
   color: #2688c5;
 }
 @media screen and (min-height: 610px) {
+  #home {
+    position: absolute;
+    top: 13.5%;
+    left: 15%;
+  }
   footer {
     position: absolute;
     bottom: 0px;
@@ -246,18 +243,24 @@ footer #footer #twitter_update_list p a {
   #home {
     width: 70%;
   }
-  #home .slider {
-    display: block;
-  }
-  #home .static {
-    display: none;
-  }
-  #home #logo {
-    float: left;
-    padding-right: 25px;
-    width: 330px;
-  }
   #footer {
     width: 70%;
+  }
+}
+@media screen and (min-width: 840px) {
+  #header {
+    width: 77%;
+  }
+  #home {
+    width: 80%;
+  }
+  #footer {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 770px) {
+  #logo {
+    float: left;
+    padding-right: 25px;
   }
 }

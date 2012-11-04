@@ -16,7 +16,7 @@ header {
 #header {
 	margin-right: auto;
 	margin-left: auto;
-	width: 77%;
+	width: 87%;
 	#menu {
 		.oswald;
 		padding-top: 15px;
@@ -75,19 +75,11 @@ header {
 
 /* ---- INDEX ---- */
 #home {
-	width: 80%;
-	position: absolute;
-	top: 13.5%;
-	left: 15%;
+	width: 90%;
+	margin: auto;
 	overflow: hidden;
-	.static {
-		display: block;
-	}
-	.slider {
-		display: none;
-	}
 	#logo {
-		width: 35%;
+		width: 330px;
 		img {
 			max-width: 100%;
 		}
@@ -163,7 +155,7 @@ footer {
 	line-height: 185px;
 	background-color: #e4e3e3;
 	#footer {
-		width: 80%;
+		width: 90%;
 		margin-right: auto;
 		margin-left: auto;
 		position: relative;
@@ -224,7 +216,13 @@ footer {
 		}
 	}
 }
+// No scroll
 @media screen and (min-height: 610px) {
+	#home {
+		position: absolute;
+		top: 13.5%;
+		left: 15%;
+	}
 	footer {
 		position: absolute;
 		bottom: 0px;
@@ -249,19 +247,25 @@ footer {
 	}
 	#home {
 		width: 70%;
-		.slider {
-			display: block;
-		}
-		.static {
-			display: none;
-		}
-		#logo {
-			float : left;
-			padding-right: 25px;
-			width: 330px;
-		}
 	}
 	#footer {
 		width: 70%;
+	}
+}
+@media screen and (min-width: 840px) {
+	#header {
+		width: 77%;
+	}
+	#home {
+		width: 80%;
+	}
+	#footer {
+		width: 80%;
+	}
+}
+@media screen and (min-width: 770px) {
+	#logo {
+		float : left;
+		padding-right: 25px;
 	}
 }
