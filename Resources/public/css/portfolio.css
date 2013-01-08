@@ -1,266 +1,261 @@
 /* Katia Moreira - Portfolio - created with LESS - LESS is MORE */
-/* ---- HEADER ---- */
-header {
-  background-color: #2688c5;
-  height: 52px;
+.kreon {
+  font-family: 'Kreon', Arial, sans-serif;
 }
-#header {
-  margin-right: auto;
-  margin-left: auto;
-  width: 87%;
-}
-#header #menu {
-  font-family: 'Oswald', Arial, sans-serif;
-  padding-top: 15px;
-}
-#header #menu li {
-  font-family: 'Oswald', Arial, sans-serif;
+/* ---- ELEMENTS GENERAUX ---- */
+.uppercase {
   text-transform: uppercase;
-  float: left;
-  margin-right: 7%;
 }
-#header #menu li a {
-  font-family: 'Oswald', Arial, sans-serif;
+.black {
+  color: #292929;
+}
+.clear {
+  clear: both;
+}
+strong {
+  font-weight: 700;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Kreon', Arial, sans-serif;
   color: #FFF;
 }
-#header #menu li a:hover {
-  color: #393939;
-}
-#header #social {
-  position: absolute;
-  left: 80%;
-  top: 10px;
-}
-#header #social a {
-  width: 32px;
-  height: 32px;
-  display: block;
-  float: left;
-  margin-right: 10px;
-}
-#header #social .twitter {
-  background: url("/bundles/kaymoreyportfolio/images/social/twitter02_dark.png");
-}
-#header #social .twitter:hover {
-  background: url("/bundles/kaymoreyportfolio/images/social/twitter02_active.png");
-}
-#header #social .linkedin {
-  background: url("/bundles/kaymoreyportfolio/images/social/in_dark.png");
-}
-#header #social .linkedin:hover {
-  background: url("/bundles/kaymoreyportfolio/images/social/in_active.png");
-}
-#header #social .blog {
-  background: url("/bundles/kaymoreyportfolio/images/social/blog_dark.png");
-}
-#header #social .blog:hover {
-  background: url("/bundles/kaymoreyportfolio/images/social/blog_active.png");
+a {
+  text-decoration: none;
 }
 /* ---- CONTENT ---- */
 #content {
-  width: 100%;
-  height: auto;
-  margin: auto;
-}
-/* ---- INDEX ---- */
-#home {
-  width: 90%;
-  margin: auto;
-  overflow: hidden;
-}
-#home #logo {
-  width: 330px;
-}
-#home #logo img {
-  max-width: 100%;
-}
-#home #logo #breakApartRounded {
-  position: absolute;
-  top: 0;
-  background-image: url('/bundles/kaymoreyportfolio/images/slider/circle.png'), url('/bundles/kaymoreyportfolio/images/slider/circle.png'), url('/bundles/kaymoreyportfolio/images/slider/circle.png'), url('/bundles/kaymoreyportfolio/images/slider/circle.png');
-  background-repeat: no-repeat;
-  /*Transition*/
-
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-}
-#home #logo .circle {
-  height: 330px;
-  width: 330px;
-  background: transparent;
-  margin: 0 50px 50px 0;
-  /*Make it a circle*/
-
-  -webkit-border-radius: 165px;
-  -moz-border-radius: 165px;
-  border-radius: 165px;
-}
-#home #text {
-  padding-top: 10%;
-}
-#home #text h1 {
-  color: #2688c5;
-  font-family: 'Oswald', Arial, sans-serif;
-  font-size: 3.3125em;
-  /* 53px / 16px */
-
-  line-height: 64px;
-}
-#home #text h2 {
-  color: #2688c5;
-  font-family: 'Oswald', Arial, sans-serif;
-  font-size: 1.75em;
-  /* 28px / 16px */
+  /* ---- Rubriques ---- */
 
 }
-#home #text .fb-like {
-  margin-top: 3px;
-  margin-bottom: 8px;
+#content #home {
+  background-color: #2688c5;
 }
-#home #text #paginator {
-  margin-top: 5px;
+#content #home .content {
+  position: relative;
+  top: 15%;
+  left: 0;
 }
-#home #text #paginator .page {
-  width: 10px;
-  height: 10px;
-  margin-right: 3px;
-  overflow: hidden;
+#content #home #logo {
+  text-align: center;
+}
+#content #home h1 {
+  font-size: 36px;
+  text-align: center;
+  line-height: 40px;
+}
+#content #who-i-am {
+  background-color: #eb5c10;
+}
+#content #who-i-am .left {
+  margin: 50px 50px 0px 0px;
   float: left;
-  background: url("/bundles/kaymoreyportfolio/images/slider/paginator.png");
-  background-position: top left;
-  cursor: pointer;
+  width: 35%;
+  border-right: solid #FFF 1px;
 }
-#home #text #paginator .page.active {
-  background-position: bottom left;
+#content #who-i-am .left p {
+  width: 280px;
+  text-align: center;
+  font-size: 0.85em;
+  line-height: 1.1em;
+}
+#content #who-i-am .left p img {
+  padding-bottom: 20px;
+}
+#content #who-i-am .left p .bigger {
+  font-size: 1.1em;
+}
+#content #who-i-am .left .cv {
+  display: block;
+  background: url("/bundles/kaymoreyportfolio/images/cv-circle.png");
+  background: no-repeat;
+  width: 58px;
+  height: 58px;
+  color: #FFF;
+  font-size: 22px;
+  margin: 15px 0px 0px 117px;
+  padding-top: 17px;
+}
+#content #who-i-am .right {
+  margin-top: 75px;
+}
+#content #who-i-am .right img {
+  float: left;
+}
+#content #who-i-am .right h3 {
+  font-size: 20px;
+  position: relative;
+  top: 5px;
+  left: 7px;
+}
+#content #who-i-am .right #skills {
+  margin-bottom: 38px;
+}
+#content #who-i-am .right .content {
+  margin-top: 30px;
+  font-size: 0.85em;
+}
+#content #who-i-am .right .content .legend {
+  width: 125px;
+  float: left;
+  padding-bottom: 1px;
+}
+#content #who-i-am .right .content p {
+  padding-bottom: 15px;
+}
+#content #projects {
+  background-color: #1aa88c;
+}
+#content #projects .content {
+  margin-top: 50px;
+}
+#content #projects .content ul {
+  float: left;
+  margin: 50px 80px 0px 0px;
+  height: 300px;
+}
+#content #projects .content .projects figure {
+  float: left;
+  margin: 0px 28px 25px 0px;
+}
+#content #contact {
+  background-color: #eb4444;
+}
+#content #contact .content {
+  margin-top: 25px;
+}
+#content #contact .content .content-center {
+  margin: 50px auto 0px auto;
+  width: 85%;
+}
+#content #contact .content h3 {
+  font-size: 20px;
+  text-align: center;
+}
+#content #contact .content h3 .bigger {
+  font-size: 27px;
+}
+#content #contact .content .left {
+  float: left;
+  border-right: solid #FFF 1px;
+  width: 49%;
+}
+#content #contact .content .left form input,
+#content #contact .content .left form textarea {
+  margin-bottom: 8px;
+  background-color: #eb4444;
+  border: solid #FFF 2px;
+  color: #FFF;
+  font-family: "Lucida Grande", Arial, sans-serif;
+  font-size: 12px;
+}
+#content #contact .content .right {
+  width: 100%;
+  padding-top: 25px;
+  padding-left: 20px;
+}
+#content #contact .content .right p {
+  text-align: center;
+}
+#content #contact .content .right p.mail {
+  margin-bottom: 50px;
+}
+#content .page-content {
+  width: 80%;
+  margin: 0 auto 0 auto;
+  padding-top: 20px;
+}
+#content .page-title {
+  border-bottom: solid #FFF 1px;
+  padding-bottom: 10px;
+  width: auto;
+  font-size: 20px;
+  width: 100px;
 }
 /* ---- FOOTER ---- */
 footer {
-  clear: both;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 185px;
-  line-height: 185px;
-  background-color: #e4e3e3;
+  background-color: #FFF;
+  height: 53px;
 }
 footer #footer {
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
+  width: 80%;
+  margin: 0 auto 0 auto;
 }
-footer #footer #left {
-  display: inline-block;
+footer #footer .logo {
+  float: left;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+footer nav {
   vertical-align: middle;
-  line-height: 1.2;
-  width: 42%;
 }
-footer #footer #profile {
+footer nav li {
   float: left;
 }
-footer #footer #profile-text {
-  font-family: Georgia, Arial, sans-serif;
-  color: #393939;
-  font-size: 0.8125em;
-  /* 13px / 16px */
-
-  padding-left: 95px;
+footer nav li.active a.hello {
+  color: #FFF;
+  background-color: #2688c5;
 }
-footer #footer #profile-text .blue {
+footer nav li.active a.who-i-am {
+  color: #FFF;
+  background-color: #eb5c10;
+}
+footer nav li.active a.projects {
+  color: #FFF;
+  background-color: #1aa88c;
+}
+footer nav li.active a.contact {
+  color: #FFF;
+  background-color: #eb4444;
+}
+footer nav li a {
+  display: block;
+  width: 100px;
+  padding: 19px 0 19px 0;
+  text-align: center;
+}
+footer nav li a.hello {
   color: #2688c5;
 }
-footer #footer #twitter_update_list {
-  width: 40%;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1.2;
-  margin-left: 15%;
-  font-family: Georgia, Arial, sans-serif;
-  color: #393939;
-  font-size: 0.8125em;
-  /* 13px / 16px */
+footer nav li a.hello:hover {
+  color: #FFF;
+  background-color: #2688c5;
 }
-footer #footer #twitter_update_list #head {
-  margin-bottom: 12px;
+footer nav li a.who-i-am {
+  color: #eb5c10;
 }
-footer #footer #twitter_update_list #head img {
-  float: left;
-  vertical-align: middle;
+footer nav li a.who-i-am:hover {
+  color: #FFF;
+  background-color: #eb5c10;
 }
-footer #footer #twitter_update_list #head .twitter-follow-button {
-  margin-top: 8px;
-  margin-left: 8px;
+footer nav li a.projects {
+  color: #1aa88c;
 }
-footer #footer #twitter_update_list #head a {
-  margin-left: 8px;
-  font-size: 1.230769230769231em;
-  /* 16px / 13px */
-
-  color: #2688c5;
+footer nav li a.projects:hover {
+  color: #FFF;
+  background-color: #1aa88c;
 }
-footer #footer #twitter_update_list p {
+footer nav li a.contact {
+  color: #eb4444;
+}
+footer nav li a.contact:hover {
+  color: #FFF;
+  background-color: #eb4444;
+}
+footer #social {
+  float: right;
   padding-top: 8px;
-  padding-bottom: 10px;
 }
-footer #footer #twitter_update_list p.first {
-  border-bottom: dotted #2688c5 1px;
+footer #social img {
+  padding-right: 10px;
 }
-footer #footer #twitter_update_list p a {
-  font-size: 1em;
-  /* 13px / 13px */
-
-  color: #2688c5;
-}
-@media screen and (min-height: 610px) {
-  #home {
-    position: absolute;
-    top: 13.5%;
-    left: 15%;
-  }
-  footer {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  #home #text h1 {
-    font-size: 4.0625em;
-    /* 65px / 16px */
-  
-  }
-  #home #text h2 {
-    font-size: 2.1875em;
-    /* 35px / 16px */
-  
-  }
-}
-@media screen and (min-width: 915px) {
-  #header {
-    width: 67%;
-  }
-  #home {
-    width: 70%;
-  }
-  #footer {
-    width: 70%;
-  }
-}
-@media screen and (min-width: 840px) {
-  #header {
-    width: 77%;
-  }
-  #home {
-    width: 80%;
-  }
-  #footer {
-    width: 80%;
-  }
-}
-@media screen and (min-width: 770px) {
-  #logo {
-    float: left;
-    padding-right: 25px;
-  }
+footer #social img.wordpress {
+  position: relative;
+  top: 2px;
+  left: 0px;
 }

@@ -1,41 +1,115 @@
 {% extends 'KaymoreyPortfolioBundle::layout.html.twig' %}
 {% block content %}
-<div id="fb-root"></div>
-<!-- Script Facebook -->
-<script>
-	(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=59514872536";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-</script>
-<!-- Script Twitter -->
-<script>
-	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-</script>
-
-<section id="home">
-		<div id="logo" class="slider">
-			<img src="{{ asset('bundles/kaymoreyportfolio/images/slider/logo.png') }}" alt="" />
-			<img src="{{ asset('bundles/kaymoreyportfolio/images/slider/cwb.png') }}" alt="" />
-			<img src="{{ asset('bundles/kaymoreyportfolio/images/slider/laposte.png') }}" alt="" />
-			<img src="{{ asset('bundles/kaymoreyportfolio/images/slider/mosayc.png') }}" alt="" />
-			<div class="circle" id="breakApartRounded"></div>
+<section id="home" class="main">
+	<div class="content">
+		<p id="logo">
+			<img src="{{ asset('bundles/kaymoreyportfolio/images/logo.png') }}" alt="" />
+		</p>
+		<h1>
+			<span class="uppercase">Bonjour</span> !<br />
+			Je m'appelle <span class="uppercase">Katia Moreira</span><br />
+			et je suis <span class="uppercase">développeuse web</span>
+		</h1>
+	</div>
+</section>
+<section id="who-i-am" class="main">
+	<div class="page-content">
+		<h2 class="page-title">Qui suis-je ?</h2>
+		<div class="left">
+			<p>
+				<img src="{{ asset('bundles/kaymoreyportfolio/images/profil.png') }}" alt="" /><br />
+				Je m’appelle <span class="uppercase">Katia Moreira</span>.<br />
+				Détentrice d’un <strong>DUT Services et Réseaux de Communication</strong>, je suis actuellement étudiante en 1ère année à <strong>l’école d’ingenieur IMAC.</strong>
+				<a href="#" class="cv">CV</a>
+			</p>
 		</div>
-		<div id="text">
-			<h1>Katia Moreira</h1>
-			<h2>Etudiante ingénieur IMAC</h2>
-			<div class="fb-like" data-href="http://katia-moreira.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div><br />
-			<a href="https://twitter.com/share" class="twitter-share-button" data-via="kaymorey" data-lang="fr"></a>
-			<div id="paginator">
-				<a class="page"></a>
-				<a class="page"></a>
-				<a class="page"></a>
-				<a class="page"></a>
+		<div class="right">
+			<div id="skills">
+				<img src="{{ asset('bundles/kaymoreyportfolio/images/laptop.png') }}" alt="" />
+				<h3>Compétences</h3>
+				<div class="content">
+					<div class="legend">Langages</div><p>PHP, JavaScript, MySQL, HTML5 / CSS3, Twig</p>
+					<div class="legend">Frameworks / Outils</div><P>Symfony 2, JQuery, Less, Git, SVN</p>
+					<div class="legend">Logiciels / Outils</div><p>Photoshop, Indesign, Sublime Text 2, CodeKit, Tower, TortoiseSVN, Transmit</p>
+				</div class="content">
+			</div>
+			<div id="exp-pro">
+				<img src="{{ asset('bundles/kaymoreyportfolio/images/case.png') }}" alt="" />
+				<h3>Expérience professionnelle</h3>
+				<div class="content">
+					<div class="legend">Avril - Août 2012</div><p>Stagiaire développeuse Web Symfony 2<br />Le hub Agence - Paris 11 (75)</p>
+					<div class="legend">Juillet 2011</div><p>Rédactrice pour un journal interne<br />Direction générale des Douanes et Droits Indirects - Montreuil (93)</p>
+				</div>
 			</div>
 		</div>
-		<div class="clear"></div>
+	</div>
+</section>
+<section id="projects" class="main">
+	<div class="page-content">
+		<h2 class="page-title">Mes projets</h2>
+		<div class="content">
+			<ul>
+				<li>Pro</li>
+				<li>Perso</li>
+				<li>Étudiants</li>
+			</ul>
+			<div class="projects">
+				<figure>
+					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
+					<figcaption>Titre de mon projet</figcaption>
+				</figure>
+				<figure>
+					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
+					<figcaption>Titre de mon projet</figcaption>
+				</figure>
+				<figure>
+					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
+					<figcaption>Titre de mon projet</figcaption>
+				</figure>
+				<figure>
+					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
+					<figcaption>Titre de mon projet</figcaption>
+				</figure>
+				<figure>
+					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
+					<figcaption>Titre de mon projet</figcaption>
+				</figure>
+				<figure>
+					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
+					<figcaption>Titre de mon projet</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="contact" class="main">
+	<div class="page-content">
+		<h2 class="page-title">Contact</h2>
+		<div class="content">
+			<h3>Et si vous aussi, vous me disiez<br /><span class="bigger">Bonjour ?</span></h3>
+			<div class="content-center">
+				<div class="left">
+					<form method="post">
+						<input type="text" name="name" placeholder="Nom" /><br />
+						<input type="text" name="mail" placeholder="Email" /><br />
+						<input type="text" name="object" placeholder="Objet" /><br />
+						<textarea placeholder="Message" rows="5" cols="30"></textarea><br />
+						<input type="submit" />
+					</form>
+				</div>
+				<div class="right">
+					<p class="mail">
+						Allergique au formulaire ?<br />
+						Envoyez moi un mail !<br /><br />
+						contact@katia-moreira.com
+					</p>
+					<p class="copyright">
+						Ce site a été créé grâce à Symfony 2, HTML5, CSS3, Less, jQuery.<br />
+						© Katia Moreira - 2013
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 {% endblock %}

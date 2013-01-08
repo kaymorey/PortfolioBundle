@@ -1,271 +1,279 @@
 /* Katia Moreira - Portfolio - created with LESS - LESS is MORE */
-
 @blue: #2688c5;
-@grey: #393939;
-.oswald () {
-  font-family: 'Oswald', Arial, sans-serif;
+@orange: #eb5c10;
+@green: #1aa88c;
+@red: #eb4444;
+@black: #292929;
+
+.kreon {
+	font-family: 'Kreon', Arial, sans-serif;
 }
 .background-img (@url) {
 	background: url("/bundles/kaymoreyportfolio/images/@{url}");
 }
-/* ---- HEADER ---- */
-header {
-	background-color: @blue;
-	height: 52px;
+
+/* ---- ELEMENTS GENERAUX ---- */
+.uppercase {
+	text-transform: uppercase;
 }
-#header {
-	margin-right: auto;
-	margin-left: auto;
-	width: 87%;
-	#menu {
-		.oswald;
-		padding-top: 15px;
-		li {
-			.oswald;
-			text-transform: uppercase;
+.black {
+	color: @black;
+}
+.clear {
+	clear: both;
+}
+strong {
+	font-weight: 700;
+}
+body {
+	width: 100%;
+	height: 100%;
+	.kreon;
+	color: #FFF;
+}
+a {
+	text-decoration: none;
+}
+
+/* ---- CONTENT ---- */
+#content {
+	#home {
+		background-color: @blue;
+		.content {
+			position: relative;
+			top: 15%;
+			left: 0;
+		}
+		#logo {
+			text-align: center;
+		}
+		h1 {
+			font-size: 36px;
+			text-align: center;
+			line-height: 40px;
+		}
+	}
+	#who-i-am {
+		background-color: @orange;
+		.left {
+			margin: 50px 50px 0px 0px;
 			float: left;
-			margin-right: 7%;
-			a {
-				.oswald;
+			width: 35%;
+			border-right: solid #FFF 1px;
+			p {
+				width: 280px;
+				text-align: center;
+				font-size: 0.85em;
+				line-height: 1.1em;
+				img {
+					padding-bottom: 20px;
+				}
+				.bigger {
+					font-size: 1.1em;
+				}
+			}
+			.cv {
+				display: block;
+				.background-img("cv-circle.png");
+				background: no-repeat;
+				width: 58px;
+				height: 58px;
 				color: #FFF;
-				&:hover {
-					color: @grey;
+				font-size: 22px;
+				margin: 15px 0px 0px 117px;
+				padding-top: 17px;
+			}
+		}
+		.right {
+			margin-top: 75px;
+			img {
+				float: left;
+
+			}
+			h3 {
+				font-size: 20px;
+				position: relative;
+				top: 5px;
+				left: 7px;
+			}
+			#skills {
+				margin-bottom: 38px;
+			}
+			.content {
+				margin-top: 30px;
+				font-size: 0.85em;
+				.legend {
+					width: 125px;
+					float: left;
+					padding-bottom: 1px;
+				}
+				p {
+					padding-bottom: 15px;
+				}
+			}
+		}
+	}
+	#projects {
+		background-color: @green;
+		.content {
+			margin-top: 50px;
+			ul {
+				float: left;
+				margin: 50px 80px 0px 0px;
+				height: 300px;
+			}
+			.projects {
+				figure {
+					float: left;
+					margin: 0px 28px 25px 0px;
+				}
+			}
+		}
+	}
+	#contact {
+		background-color: @red;
+		.content {
+			margin-top: 25px;
+			.content-center {
+				margin: 50px auto 0px auto;
+				width: 85%;
+			}
+			h3 {
+				font-size: 20px;
+				text-align: center;
+				.bigger {
+					font-size: 27px;
+				}
+			}
+			.left {
+				float: left;
+				border-right: solid #FFF 1px;
+				width: 49%;
+				form {
+					input, textarea {
+						margin-bottom: 8px;
+						background-color: @red;
+						border: solid #FFF 2px;
+						color: #FFF;
+						font-family: "Lucida Grande", Arial, sans-serif;
+						font-size: 12px;
+					}
+				}
+			}
+			.right {
+				width: 100%;
+				padding-top: 25px;
+				padding-left: 20px;
+				p {
+					text-align: center;
+					&.mail {
+						margin-bottom: 50px;
+					}
+				}
+			}
+		}
+	}
+	/* ---- Rubriques ---- */
+	.page-content {
+		width: 80%;
+		margin: 0 auto 0 auto;
+		padding-top: 20px;
+	}
+	.page-title {
+		border-bottom: solid #FFF 1px;
+		padding-bottom: 10px;
+		width: auto;
+		font-size: 20px;
+		width: 100px;
+	}
+}
+/* ---- FOOTER ---- */
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #FFF;
+	height: 53px;
+	#footer {
+		width: 80%;
+		margin: 0 auto 0 auto;
+		.logo {
+			float: left;
+			padding-right: 20px;
+			padding-top: 5px;
+		}
+	}
+	nav {
+		vertical-align: middle;
+		li {
+			float: left;
+			&.active {
+				a {
+					&.hello {
+						color: #FFF;
+						background-color: @blue;
+					}
+					&.who-i-am {
+						color: #FFF;
+						background-color: @orange;
+					}
+					&.projects {
+						color: #FFF;
+						background-color: @green;
+					}
+					&.contact {
+						color: #FFF;
+						background-color: @red;
+					}
+				}
+			}
+			a {
+				display: block;
+				width: 100px;
+				padding: 19px 0 19px 0;
+				text-align: center;
+				&.hello {
+					color: @blue;
+					&:hover {
+						color: #FFF;
+						background-color: @blue;
+					}
+				}
+				&.who-i-am {
+					color: @orange;
+					&:hover {
+						color: #FFF;
+						background-color: @orange;
+					}
+				}
+				&.projects {
+					color: @green;
+					&:hover {
+						color: #FFF;
+						background-color: @green;
+					}
+				}
+				&.contact {
+					color: @red;
+					&:hover {
+						color: #FFF;
+						background-color: @red;
+					}
 				}
 			}
 		}
 	}
 	#social {
-		position: absolute;
-		left: 80%;
-		top: 10px;
-		a {
-			width: 32px;
-			height: 32px;
-			display: block;
-			float: left;
-			margin-right: 10px;
-		}
-		.twitter {
-			.background-img("social/twitter02_dark.png");
-			&:hover {
-				.background-img("social/twitter02_active.png");
-			}
-		}
-		.linkedin {
-			.background-img("social/in_dark.png");	
-			&:hover {
-				.background-img("social/in_active.png");
-			}
-		}
-		.blog {
-			.background-img("social/blog_dark.png");
-			&:hover {
-				.background-img("social/blog_active.png");
-			}	
-		}
-	}
-}
-
-/* ---- CONTENT ---- */
-#content {
-	width: 100%;
-	height: auto;
-	margin: auto;
-}
-
-/* ---- INDEX ---- */
-#home {
-	width: 90%;
-	margin: auto;
-	overflow: hidden;
-	#logo {
-		width: 330px;
+		float: right;
+		padding-top: 8px;
 		img {
-			max-width: 100%;
-		}
-		#breakApartRounded {
-			position: absolute;
-			top: 0;
-			background-image: url('/bundles/kaymoreyportfolio/images/slider/circle.png'), 
-				url('/bundles/kaymoreyportfolio/images/slider/circle.png'), 
-				url('/bundles/kaymoreyportfolio/images/slider/circle.png'), 
-				url('/bundles/kaymoreyportfolio/images/slider/circle.png');
-			background-repeat: no-repeat;
-		 
-			/*Transition*/
-			-webkit-transition: all 1s ease;
-			-moz-transition: all 1s ease;
-			-o-transition: all 1s ease;
-			-ms-transition: all 1s ease;
-			transition: all 1s ease; 
-		}
-		.circle {
-			height: 330px; 
-			width: 330px;
-			background: transparent;
-			margin: 0 50px 50px 0;
-		 
-			/*Make it a circle*/
-			-webkit-border-radius: 165px;
-			-moz-border-radius: 165px;
-			border-radius: 165px;
-		}
-	}
-	#text {
-		padding-top: 10%;
-		h1 {
-			color: @blue;
-			.oswald;
-			font-size: 3.3125em; /* 53px / 16px */
-			line-height: 64px;
-		}
-		h2 {
-			color: @blue;
-			.oswald;
-			font-size: 1.75em; /* 28px / 16px */
-		}
-		.fb-like {
-			margin-top: 3px;
-			margin-bottom: 8px;
-		}
-		#paginator {
-			margin-top: 5px;
-			.page {
-				width: 10px;
-				height: 10px;
-				margin-right: 3px;
-				overflow: hidden;
-				float: left;
-				.background-img("slider/paginator.png");
-				background-position: top left;
-				cursor: pointer;
-				&.active {
-					background-position: bottom left;
-				}
+			padding-right: 10px;
+			&.wordpress {
+				position: relative;
+				top: 2px;
+				left: 0px;
 			}
 		}
-	}
-}
-
-/* ---- FOOTER ---- */
-footer {
-	clear: both;
-	width: 100%;
-	height: 185px;
-	line-height: 185px;
-	background-color: #e4e3e3;
-	#footer {
-		width: 90%;
-		margin-right: auto;
-		margin-left: auto;
-		position: relative;
-		#left {
-			display: inline-block;
-			vertical-align: middle;
-			line-height:1.2;
-			width: 42%;
-		}
-		#profile {
-			float: left;
-		}
-		#profile-text {
-			font-family: Georgia, Arial, sans-serif;
-			color: @grey;
-			font-size: 0.8125em; /* 13px / 16px */
-			padding-left: 95px;
-			.blue {
-				color: @blue;
-			}
-		}
-		#twitter_update_list {
-			width: 40%;
-			display: inline-block;
-			vertical-align: middle;
-			line-height:1.2;
-			margin-left: 15%;
-			font-family: Georgia, Arial, sans-serif;
-			color: @grey;
-			font-size: 0.8125em; /* 13px / 16px */			
-			#head {
-				margin-bottom: 12px;
-				img {
-					float: left;
-					vertical-align: middle;
-				}
-				.twitter-follow-button {
-					margin-top: 8px;
-					margin-left: 8px;
-				}
-				a {
-					margin-left: 8px;
-					font-size: 1.230769230769231em; /* 16px / 13px */
-					color: @blue;
-				}
-			}
-			p {
-				padding-top: 8px;
-				padding-bottom: 10px;
-				&.first {
-					border-bottom: dotted @blue 1px;
-				}
-				a {
-					font-size: 1em; /* 13px / 13px */
-					color: @blue;
-				}
-			}
-		}
-	}
-}
-// No scroll
-@media screen and (min-height: 610px) {
-	#home {
-		position: absolute;
-		top: 13.5%;
-		left: 15%;
-	}
-	footer {
-		position: absolute;
-		bottom: 0px;
-		left: 0px;
-	}
-}
-@media screen and (min-width: 1100px) {
-	#home {
-		#text {
-			h1 {
-				font-size: 4.0625em; /* 65px / 16px */
-			}
-			h2 {
-				font-size: 2.1875em; /* 35px / 16px */
-			}
-		}
-	}
-}
-@media screen and (min-width: 915px) {
-	#header {
-		width: 67%;
-	}
-	#home {
-		width: 70%;
-	}
-	#footer {
-		width: 70%;
-	}
-}
-@media screen and (min-width: 840px) {
-	#header {
-		width: 77%;
-	}
-	#home {
-		width: 80%;
-	}
-	#footer {
-		width: 80%;
-	}
-}
-@media screen and (min-width: 770px) {
-	#logo {
-		float : left;
-		padding-right: 25px;
 	}
 }

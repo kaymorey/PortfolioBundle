@@ -8,14 +8,17 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+use Kaymorey\PortfolioBackBundle\Controller\WebController;
 
-class SectionController extends Controller
+
+class SectionController extends WebController
 {
 	/**
-     * @Route("/test", name="portfolio_test")
+     * @Route("/", name="portfolio_accueil")
      */
-    public function testAction()
+    public function indexAction()
     {
-        return $this->render('KaymoreyPortfolioBundle::test.html.twig');
+    	$proWorks = $this->getWorksByCategory("pro");
+        return $this->render('KaymoreyPortfolioBundle::index.html.twig');
     }
 }
