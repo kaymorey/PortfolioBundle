@@ -41,6 +41,7 @@
 					<div class="legend">Juillet 2011</div><p>Rédactrice pour un journal interne<br />Direction générale des Douanes et Droits Indirects - Montreuil (93)</p>
 				</div>
 			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
 </section>
@@ -48,37 +49,17 @@
 	<div class="page-content">
 		<h2 class="page-title">Mes projets</h2>
 		<div class="content">
-			<ul>
-				<li>Pro</li>
-				<li>Perso</li>
-				<li>Étudiants</li>
+			<ul class="categories">
+				{% for categorie in categories %}
+				<li{% if categorie.title == "Pro" %} class="active"{% endif %}>
+					<a href="#" data-id="{{ categorie.id }}">{{ categorie.title }}</a>
+				</li>
+				{% endfor %}
 			</ul>
 			<div class="projects">
-				<figure>
-					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
-					<figcaption>Titre de mon projet</figcaption>
-				</figure>
-				<figure>
-					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
-					<figcaption>Titre de mon projet</figcaption>
-				</figure>
-				<figure>
-					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
-					<figcaption>Titre de mon projet</figcaption>
-				</figure>
-				<figure>
-					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
-					<figcaption>Titre de mon projet</figcaption>
-				</figure>
-				<figure>
-					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
-					<figcaption>Titre de mon projet</figcaption>
-				</figure>
-				<figure>
-					<img src="{{ asset('bundles/kaymoreyportfolio/images/projet.png') }}" alt="" />
-					<figcaption>Titre de mon projet</figcaption>
-				</figure>
+				{% include 'KaymoreyPortfolioBundle:List:projets.html.twig' with {'projets' : projets} %}
 			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
 </section>
@@ -89,13 +70,17 @@
 			<h3>Et si vous aussi, vous me disiez<br /><span class="bigger">Bonjour ?</span></h3>
 			<div class="content-center">
 				<div class="left">
-					<form method="post">
+					<form method="post" action="{{ path('portfolio_contact') }}">
+						{{ form_widget(form) }}
+						<input type="submit" />
+					</form>
+					<!--<form method="post">
 						<input type="text" name="name" placeholder="Nom" /><br />
 						<input type="text" name="mail" placeholder="Email" /><br />
 						<input type="text" name="object" placeholder="Objet" /><br />
 						<textarea placeholder="Message" rows="5" cols="30"></textarea><br />
 						<input type="submit" />
-					</form>
+					</form>-->
 				</div>
 				<div class="right">
 					<p class="mail">
@@ -110,6 +95,25 @@
 				</div>
 			</div>
 		</div>
+		<div class="clear"></div>
 	</div>
 </section>
+{% endblock %}
+{% block javascript %}
+<script type="text/javascript">
+{% for projet in projets %}
+	{% set docs = projet.docs %}
+	{% if docs is not empty %}
+	$(".{{projet.slug}}_fancy").click(function() {
+		$.fancybox.open([
+		{% for doc in docs %}
+			{
+				href : "{{ asset('uploads/docs/'~projet.slug~'/'~doc.path) }}"
+			}{% if loop.last == false %},{% endif %}
+		{% endfor %}
+		]);
+	});
+	{% endif %}
+{% endfor %}
+</script>
 {% endblock %}

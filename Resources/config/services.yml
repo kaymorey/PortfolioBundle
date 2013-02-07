@@ -5,3 +5,8 @@ services:
 #    kaymorey_portfolio.example:
 #        class: %kaymorey_portfolio.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
+
+    portfolioweb.twig.portfolioweb_extension:
+        class: Kaymorey\PortfolioBackBundle\Twig\Extension\WebExtension
+        tags:
+            - { name: twig.extension }

@@ -50,9 +50,8 @@ a {
 }
 #content #who-i-am .left {
   margin: 50px 50px 0px 0px;
-  float: left;
   width: 35%;
-  border-right: solid #FFF 1px;
+  border: none;
 }
 #content #who-i-am .left p {
   width: 280px;
@@ -68,8 +67,7 @@ a {
 }
 #content #who-i-am .left .cv {
   display: block;
-  background: url("/bundles/kaymoreyportfolio/images/cv-circle.png");
-  background: no-repeat;
+  background: url("/bundles/kaymoreyportfolio/images/cv-circle.png") no-repeat;
   width: 58px;
   height: 58px;
   color: #FFF;
@@ -115,9 +113,28 @@ a {
   margin: 50px 80px 0px 0px;
   height: 300px;
 }
+#content #projects .content ul li.active {
+  list-style-type: disc;
+}
+#content #projects .content ul li:hover {
+  list-style-type: disc;
+}
+#content #projects .content ul a {
+  color: #FFF;
+}
 #content #projects .content .projects figure {
   float: left;
   margin: 0px 28px 25px 0px;
+  position: relative;
+}
+#content #projects .content .projects figure .see-more {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+#content #projects .content .projects figure figcaption {
+  color: #FFF;
 }
 #content #contact {
   background-color: #eb4444;
@@ -162,7 +179,7 @@ a {
   margin-bottom: 50px;
 }
 #content .page-content {
-  width: 80%;
+  width: 90%;
   margin: 0 auto 0 auto;
   padding-top: 20px;
 }
@@ -251,11 +268,27 @@ footer #social {
   float: right;
   padding-top: 8px;
 }
-footer #social img {
-  padding-right: 10px;
+footer #social a {
+  display: inline-block;
+}
+footer #social a.twitter {
+  padding-top: 4px;
+}
+footer #social a.linkedin {
+  padding-top: 1px;
+}
+footer #social a.twitter,
+footer #social a.wordpress {
+  margin-right: 10px;
 }
 footer #social img.wordpress {
   position: relative;
   top: 2px;
   left: 0px;
+}
+footer #social .tooltip {
+  font-family: Helvetica, Arial, sans-serif;
+}
+footer #social .tooltip .tooltip-inner {
+  padding: 10px 8px;
 }

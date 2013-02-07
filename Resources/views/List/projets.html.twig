@@ -1,0 +1,9 @@
+{% for projet in projets %}
+	<figure>
+		<a href="#" class="{{projet.slug}}_fancy">
+			<img src="{{ asset('uploads/works/'~projet.img) }}" alt="" data-test="fadeIn"/>
+			<img src="{{ asset('bundles/kaymoreyportfolio/images/see-more.png') }}" alt="" class="see-more" />
+			<figcaption>{{ projet.title }}</figcaption>
+		</a>
+	</figure>
+{% endfor %}
