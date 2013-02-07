@@ -1,9 +1,10 @@
 {% for projet in projets %}
 	<figure>
-		<a href="#" class="{{projet.slug}}_fancy">
-			<img src="{{ asset('uploads/works/'~projet.img) }}" alt="" data-test="fadeIn"/>
+		<a href="#" class="{{projet.slug}}_fancy projet_fancy">
+			<img src="{{ asset('uploads/works/'~projet.img) }}" alt="" data-test="fadeIn" class="main-img" />
 			<img src="{{ asset('bundles/kaymoreyportfolio/images/see-more.png') }}" alt="" class="see-more" />
 			<figcaption>{{ projet.title }}</figcaption>
+			<span class="skills">{{ projet.skills }}</span>
 		</a>
 	</figure>
 {% endfor %}

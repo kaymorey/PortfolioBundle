@@ -136,6 +136,11 @@ a {
 #content #projects .content .projects figure figcaption {
   color: #FFF;
 }
+#content #projects .content .projects figure .skills {
+  color: #FFF;
+  font-size: 13.5px;
+  font-weight: 300;
+}
 #content #contact {
   background-color: #eb4444;
 }
@@ -189,6 +194,13 @@ a {
   width: auto;
   font-size: 20px;
   width: 100px;
+}
+/* ---- FANCYBOX ---- */
+.projet-url {
+  background-color: #1aa88c;
+  color: #FFF;
+  padding: 5px 8px;
+  margin-top: 5px;
 }
 /* ---- FOOTER ---- */
 footer {

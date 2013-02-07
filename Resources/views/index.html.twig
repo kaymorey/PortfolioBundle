@@ -108,10 +108,20 @@
 		$.fancybox.open([
 		{% for doc in docs %}
 			{
-				href : "{{ asset('uploads/docs/'~projet.slug~'/'~doc.path) }}"
+				href : "{{ asset('uploads/docs/'~projet.slug~'/'~doc.path) }}",
+				title : '<div>{{ doc.description }}<br /><a href="{{ projet.url}}" class="projet-url">Voir le site</a></div>'
 			}{% if loop.last == false %},{% endif %}
 		{% endfor %}
-		]);
+		], {
+			helpers : {
+				title : {
+					type : 'inside'
+				}
+			},
+			prevEffect : 'fade', 
+			nextEffect : 'fade'
+		});
+		return false;
 	});
 	{% endif %}
 {% endfor %}

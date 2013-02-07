@@ -58,6 +58,7 @@ $(document).ready(function() {
 		$("#projects .projects").html("Problème lors du chargement des données");	
 	}
 
+
 	// Footer - tooltip
 	$('.social-tooltip').live({
 		mouseenter : function() {
