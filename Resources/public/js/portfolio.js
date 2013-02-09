@@ -25,7 +25,9 @@ $(document).ready(function() {
 	});
 
 	// Navigation
-	$('nav').localScroll();
+	$('nav').onePageNav({
+		currentClass: 'active'
+	});
 
 	// Projets - see more
 	$(".projects figure .see-more").live({

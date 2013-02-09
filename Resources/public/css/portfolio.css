@@ -202,6 +202,9 @@ a {
   padding: 5px 8px;
   margin-top: 5px;
 }
+.projet-description {
+  margin-bottom: 5px;
+}
 /* ---- FOOTER ---- */
 footer {
   position: fixed;

@@ -109,7 +109,7 @@
 		{% for doc in docs %}
 			{
 				href : "{{ asset('uploads/docs/'~projet.slug~'/'~doc.path) }}",
-				title : '<div>{{ doc.description }}<br /><a href="{{ projet.url}}" class="projet-url">Voir le site</a></div>'
+				title : '<div><p class="projet-description">{{ doc.description }}</p><a href="{{ projet.url}}" class="projet-url">Voir le site</a></div>'
 			}{% if loop.last == false %},{% endif %}
 		{% endfor %}
 		], {
