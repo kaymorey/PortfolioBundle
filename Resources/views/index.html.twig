@@ -99,31 +99,4 @@
 	</div>
 </section>
 {% endblock %}
-{% block javascript %}
-<script type="text/javascript">
-{% for projet in projets %}
-	{% set docs = projet.docs %}
-	{% if docs is not empty %}
-	$(".{{projet.slug}}_fancy").click(function() {
-		$.fancybox.open([
-		{% for doc in docs %}
-			{
-				href : "{{ asset('uploads/docs/'~projet.slug~'/'~doc.path) }}",
-				title : '<div><p class="projet-description">{{ doc.description }}</p><a href="{{ projet.url}}" class="projet-url">Voir le site</a></div>'
-			}{% if loop.last == false %},{% endif %}
-		{% endfor %}
-		], {
-			helpers : {
-				title : {
-					type : 'inside'
-				}
-			},
-			prevEffect : 'fade', 
-			nextEffect : 'fade'
-		});
-		return false;
-	});
-	{% endif %}
-{% endfor %}
-</script>
-{% endblock %}
+

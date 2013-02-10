@@ -8,3 +8,6 @@
 		</a>
 	</figure>
 {% endfor %}
+{% block javascript %}
+{% include 'KaymoreyPortfolioBundle:Ajax:fancybox.html.twig' with {'projets' : projets} %}
+{% endblock %}

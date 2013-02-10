@@ -1,0 +1,26 @@
+<script type="text/javascript">
+{% for projet in projets %}
+	{% set docs = projet.docs %}
+	{% if docs is not empty %}
+	$(".{{projet.slug}}_fancy").click(function() {
+		$.fancybox.open([
+		{% for doc in docs %}
+			{
+				href : "{{ asset('uploads/docs/'~projet.slug~'/'~doc.path) }}",
+				title : '<div><p class="projet-description">{{ doc.description }}</p>{% if projet.url is not empty %}<a href="{{ projet.url}}" class="projet-url">Voir le site</a>{% endif %}</div>'
+			}{% if loop.last == false %},{% endif %}
+		{% endfor %}
+		], {
+			helpers : {
+				title : {
+					type : 'inside'
+				}
+			},
+			prevEffect : 'fade', 
+			nextEffect : 'fade'
+		});
+		return false;
+	});
+	{% endif %}
+{% endfor %}
+</script>
